@@ -31,7 +31,7 @@ Automated Test Project
 #### Given
 As a non-waiting customer I want to pick up my car before 16:00
 #### And
-“Kundergruppe” is selected as Fleet
+“Kundergruppe” is selected as Fleet OR Retail
 #### When 
 I select option “I would like to pick up my car before 16:00 ”on a page just before the parking image page 
 #### And
@@ -43,7 +43,7 @@ Parking image page is displayed successfully
 #### Given
 As a non-waiting customer I can pick up my car when it’s ready
 #### And
-“Kundergruppe” is selected as Fleet
+“Kundergruppe” is selected as Fleet OR Retail
 #### When 
 I select option “I have no plans for today, please call me when my car is ready” on a page just before the parking image page 
 #### And
