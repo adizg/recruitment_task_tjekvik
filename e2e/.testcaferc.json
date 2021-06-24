@@ -1,0 +1,20 @@
+{
+
+  "browsers": ["chrome"],
+  "concurrency": 1,
+  "skipJsErrors": true,
+  "ajaxRequestTimeout": 400000,
+  "developmentMode": true,
+  "screenshots": {
+    "path": "reports/screenshots/",
+    "takeOnFails": true
+  },
+  "reporter": [{
+      "name": "spec"
+    },
+    {
+      "name": "json",
+      "output": "reports/report_file.json"
+    }
+  ]
+}

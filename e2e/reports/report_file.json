@@ -1,0 +1,59 @@
+{
+  "startTime": "2021-06-24T15:40:09.386Z",
+  "endTime": "2021-06-24T15:41:13.775Z",
+  "userAgents": [
+    "Chrome 91.0.4472.114 / Windows 10"
+  ],
+  "passed": 4,
+  "total": 4,
+  "skipped": 0,
+  "fixtures": [
+    {
+      "name": "car-service - customer group: Fleet",
+      "path": "C:\\Users\\asuch\\OneDrive\\Dokumenty\\projects\\recruitment_task_testcafe_tjekvik\\e2e\\test-script.js",
+      "meta": {},
+      "tests": [
+        {
+          "name": "As a non-waiting customer with registration number A84CE (Customer group: Fleet) I want to pick up car before 16:00",
+          "meta": {},
+          "errs": [],
+          "durationMs": 15192,
+          "screenshotPath": null,
+          "skipped": false
+        },
+        {
+          "name": "As a non-waiting customer with registration number A84CE (Customer group: Fleet) I can pick up car whenever it's ready",
+          "meta": {},
+          "errs": [],
+          "durationMs": 11764,
+          "screenshotPath": null,
+          "skipped": false
+        }
+      ]
+    },
+    {
+      "name": "car-service - customer group: Retail",
+      "path": "C:\\Users\\asuch\\OneDrive\\Dokumenty\\projects\\recruitment_task_testcafe_tjekvik\\e2e\\test-script.js",
+      "meta": {},
+      "tests": [
+        {
+          "name": "As a non-waiting customer with registration number ECD42 (Customer group: Retail) I want to pick up car before 16:00",
+          "meta": {},
+          "errs": [],
+          "durationMs": 18723,
+          "screenshotPath": null,
+          "skipped": false
+        },
+        {
+          "name": "As a non-waiting customer with registration number ECD42 (Customer group: Retail) I can pick up car whenever it's ready",
+          "meta": {},
+          "errs": [],
+          "durationMs": 18643,
+          "screenshotPath": null,
+          "skipped": false
+        }
+      ]
+    }
+  ],
+  "warnings": []
+}

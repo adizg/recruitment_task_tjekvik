@@ -1,0 +1,16 @@
+[
+    {
+        "carLicensePlateNumber": "A84CE",
+        "question": "When do you want to collect your car keys?",
+        "customerGroup": "Fleet",
+        "firstAnswer": "I would like to pick up my car before 16:00.",
+        "secondAnswer": "I have no plans for today, please call me when my car is ready."
+    },
+    {
+        "carLicensePlateNumber": "ECD42",
+        "question": "When do you want to collect your car keys?",
+        "customerGroup": "Retail",
+        "firstAnswer": "I would like to pick up my car before 16:00.",
+        "secondAnswer": "I have no plans for today, please call me when my car is ready."
+    }
+]
