@@ -5,14 +5,15 @@ Automated Test Project
 
 ## Initial steps
 * Clone the project from GitHub: https://github.com/adizg/recruitment_task_tjekvik
-* Install TestCafe globally using a command:
+* Install TestCafe globally using a command:   
+`npm install -g testcafe`
 * Run cmd shell and go to e2e directory .\recruitment_task_tjekvik\e2e
-* Call a single command to run a test script:
+* Call a single command to run a test script:  
 `testcafe test-script.js`
 
 ## Test structure explanation
 * e2e – main folder, where you can find test script file: test-script.js and config file: .testcaferc.json;  
-* helpers – created to execute data-driven tests, data.json consists of two input values: carLicensePlateNumber, question, customerGroup, firstAnswer and secondAnswer, each object represents one iteration;  
+* helpers – created to execute data-driven tests, data.json consists of the input values: carLicensePlateNumber, question, customerGroup, firstAnswer and secondAnswer, each object represents one iteration;  
 * pages – page model including elements of the pages and common operations.    
 
 ## Settings description in .testcaferc.json
