@@ -7,7 +7,7 @@ class Page {
   constructor() {
     this.nextButton = Selector('button').withAttribute('class', 'ld-btn ld-ext-right btn btn-primary btn-lg btn navbar-btn btn-pv-nt-kiosk ');
     this.submitFormButton = Selector('button').withAttribute('data-action', 'submit-form');
-    this.questionRadioButtons = Selector('div').withAttribute('class', 'radio-list__check');
+    this.questionRadioButton = Selector('div').withAttribute('class', 'radio-list__check');
     this.questionRadioOption = Selector('input').withAttribute('type', 'radio');
     this.nextModalButton = Selector('button').withAttribute('class', 'ld-btn ld-ext-right btn btn-primary btn-lg btn navbar-btn ');
     this.startCheckInButton = Selector('li').withAttribute('data-type', 'check_in');

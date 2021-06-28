@@ -9,7 +9,7 @@ const getPageUrl = ClientFunction(() => window.location.href); // returns URL of
 const dataSet = require('./helpers/data.json'); // data-driven-tests
 
 dataSet.forEach(data => { // data-driven-tests - calling test method in each iteration
-  const headerContentFirstAnwser = Selector('label').withText(data.firstAnswer);
+  const headerFirstAnwser = Selector('label').withText(data.firstAnswer);
 
   fixture `car-service - customer group: ${data.customerGroup}`
     .page `https://daimler-shop-terminal1.tjekvik-staging.com/kiosk/car_service` // starting webpage
@@ -37,7 +37,7 @@ dataSet.forEach(data => { // data-driven-tests - calling test method in each ite
       await page.clickNextModalButton()
       await page.clickAcceptButton()
 
-      while (!(await headerContentFirstAnwser.exists))
+      while (!(await headerFirstAnwser.exists))
         await page.clickSubmitFormButton();
       await t.expect(getPageUrl()).contains('check_in/answers')
 
@@ -50,9 +50,9 @@ dataSet.forEach(data => { // data-driven-tests - calling test method in each ite
 
   test(`As a non-waiting customer with registration number ${data.carLicensePlateNumber} (Customer group: ${data.customerGroup}) I want to pick up car before 16:00`, async t => {
     if ((data.customerGroup) == 'Fleet') {
-      await t.click(page.questionRadioButtons.nth(0)) // select the first answer / 1st option
+      await t.click(page.questionRadioButton.nth(0)) // select the first answer / 1st option
     } else { // customerGroup == 'Retail'
-      await t.click(page.questionRadioButtons.nth(2)) // select the first answer / 3rd option
+      await t.click(page.questionRadioButton.nth(2)) // select the first answer / 3rd option
     }
     await page.clickNextButton()
     await t.expect(getPageUrl()).contains('check_in/car_parks') // check if the current url contains 'check_in/car_parks'
@@ -66,10 +66,10 @@ dataSet.forEach(data => { // data-driven-tests - calling test method in each ite
 
   test(`As a non-waiting customer with registration number ${data.carLicensePlateNumber} (Customer group: ${data.customerGroup}) I can pick up car whenever it's ready`, async t => {
     if ((data.customerGroup) == 'Fleet') {
-      await t.click(page.questionRadioButtons.nth(1)) // select the first answer / 1st option
+      await t.click(page.questionRadioButton.nth(1)) // select the first answer / 1st option
     } else { // customerGroup == 'Retail'
-      await t.click(page.questionRadioButtons.nth(3)) // select the first answer / 3rd option
-        .click(page.questionRadioButtons.nth(0))
+      await t.click(page.questionRadioButton.nth(3)) // select the first answer / 3rd option
+        .click(page.questionRadioButton.nth(0))
     }
     await page.clickNextButton()
     await t.expect(getPageUrl()).contains('check_in/car_parks') // check if the current url contains 'check_in/car_parks'
@@ -78,7 +78,7 @@ dataSet.forEach(data => { // data-driven-tests - calling test method in each ite
       await t.expect(page.questionRadioOption.nth(1).hasAttribute('checked')).ok() // verify if the second answer is checked
     } else { // customerGroup == 'Retail'
       await t.expect(page.questionRadioOption.nth(3).hasAttribute('checked')).ok() // verify if the second answer is checked
-        .click(page.questionRadioButtons.nth(0))
+        .click(page.questionRadioButton.nth(0))
     }
   });
 });
